@@ -5,8 +5,8 @@ from langchain_community.llms.huggingface_endpoint import HuggingFaceEndpoint
 from langchain_core.output_parsers import StrOutputParser
 from langchain_core.prompts import ChatPromptTemplate, HumanMessagePromptTemplate, SystemMessagePromptTemplate
 
-token = os.environ.get("HF_TOKEN") # Ideally, we have this token set. Otherwise, replace with hardcoded HF token.
-API_URL = "https://z8dvl7fzhxxcybd8.eu-west-1.aws.endpoints.huggingface.cloud"
+token = os.environ['HF_TOKEN'] # Ideally, we have this token set. Otherwise, replace with hardcoded HF token.
+API_URL = os.environ['LLM_ENDPOINT']
 headers = {"Authorization": "Bearer " + token}
 textInput = """
 <|system|>
