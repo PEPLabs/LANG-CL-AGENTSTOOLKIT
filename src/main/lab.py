@@ -1,8 +1,10 @@
 import json
 import os
 
+from langchain_community.agent_toolkits import JsonToolkit, create_json_agent
 from langchain_community.chat_models import ChatHuggingFace
 from langchain_community.llms.huggingface_endpoint import HuggingFaceEndpoint
+from langchain_community.tools.json.tool import JsonSpec
 
 # ------------------------------------------------------------------------------
 # Initialize Variables - DO NOT TOUCH
@@ -42,8 +44,8 @@ def execute_json_agent():
     - Create a JsonSpec class is used to create a specification for the
         toolkit providing two arguments 'dict_=data' dictionary and a 'max_value_length=1000'.
     - Create a JsonToolkit instance named 'json_toolkit', providing a single argument 'spec=json_spec'.
-    - Create a JSON agent using the 'create_json_agent' function. The 'chat_model' instance of ChatHuggingFace, the
-        'json_toolkit', and a verbosity setting of True are passed as arguments.
+    - Create a JSON agent using the 'create_json_agent' function. USe 'chat_model' instance of ChatHuggingFace, the
+        'json_toolkit', and a 'verbose=True' passed as arguments.
     - Loop through the 'questions' list. For each question, the 'run' method of the agent is called with the question as
         an argument. The response is appended to the 'response' list.
     - Return the 'response' list.
