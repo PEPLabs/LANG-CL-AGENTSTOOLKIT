@@ -10,7 +10,7 @@ pass all test cases provided in [`src/test/test_lab.py`](./src/test/test_lab.py)
 The code you should modify, as well as the instructions for completing the lab, are in [`src/main/lab.py`](src/main/lab.py). Take notice of
 the TODO comments in the file, this contains all instructions for the implementations required to complete the lab.
 
-You may modify [`app.py`](app.py), which is provided for manual testing.
+You may modify [`app.py`](src/main/app.py), which is provided for manual testing.
 
 You should ***NOT*** modify [`src/test/test_lab.py`](src/test/test_lab.py) or anything commented with "DO NOT TOUCH". You must pass all 
 test cases provided to pass the lab.
